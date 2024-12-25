@@ -133,6 +133,9 @@ export function DreamGraze(props) {
           <mesh geometry={nodes.ProvincialWood.geometry} material={materials.ProvincialWood} />
           <mesh geometry={nodes.GoldenOak.geometry} material={materials.GoldenOak} />
           <mesh geometry={nodes.White.geometry} material={materials.White} />
+          <mesh geometry={nodes.Brown.geometry} material={materials.Brown} />
+          <mesh geometry={nodes.Bronze.geometry} material={materials.Bronze} />
+          <mesh geometry={nodes.ForestGreen.geometry} material={materials.ForestGreen} />
         </group>
 
         <group ref={frame1} position={[0, -1 * offsetF1, 0]}>
