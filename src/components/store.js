@@ -6,11 +6,11 @@ const state = proxy([
         name: 'FreshSight',
         anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
 
-        gridStyles: ['Flat btw Glass', 'Contour outside Glass'],
+        gridStyles: ['GBG Flat', 'SDL Contoured'],
 
-        gridStyle: 'Contour outside Glass',
+        gridStyle: 'SDL Contoured',
 
-        gridOptions: ['No Grid', '1V1H', '2V1H', '2V2H', '2V2H2', '3V2H', '2V0H'],
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V1H', '2V2H', 'Prairie', 'Perimeter'],
         gridOption: 'No Grid',
 
         screenOptions: ['No Screen', 'Half Screen'], //['No Screen', 'Half Screen', 'Full Screen'],
@@ -27,13 +27,58 @@ const state = proxy([
     },
     {
         id: 1,
+        name: 'SolidView',
+        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
+
+        gridStyles: ['GBG Flat', 'GBG Contoured'],
+        gridStyle: 'GBG Contoured',
+
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V1H', '2V2H', 'Prairie', 'Perimeter'],
+        gridOption: 'No Grid',
+
+        screenOptions: ['No Screen', 'Half Screen', 'Full Screen'],
+        screenOption: 'No Screen',
+
+        colorInOutDiff: false,
+        color: ['White', 'Beige'],
+        colorSelected: 'White',
+
+        exColor: [],
+        inColor: [],
+        excolorSelected: '',
+        incolorSelected: '',
+    },
+    {
+        id: 2,
+        name: 'TitanEdge',
+        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
+
+        gridStyles: ['GBG Flat', 'GBG Contoured'],
+        gridStyle: 'GBG Contoured',
+
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V1H', '2V2H', 'Prairie', 'Perimeter'],
+        gridOption: 'No Grid',
+
+        screenOptions: ['No Screen', 'Half Screen', 'Full Screen'],
+        screenOption: 'No Screen',
+
+        colorInOutDiff: true,
+        color: [],
+        colorSelected: '',
+        exColor: ['White', 'Beige', 'Cashmere', 'Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', 'Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        inColor: ['White', 'Beige'],
+        excolorSelected: 'White',
+        incolorSelected: 'White',
+    },
+    {
+        id: 3,
         name: 'DreamGraze',
         anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
 
-        gridStyles: ['Contour btw Glass', 'Contour outside Glass'],
-        gridStyle: 'Contour outside Glass',
+        gridStyles: ['GBG Contoured', 'SDL Contoured'],
+        gridStyle: 'GBG Contoured',
 
-        gridOptions: ['No Grid', '1V1H', '2V1H', '2V0H', '1V0H'],
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V1H', '2V2H', 'Prairie', 'Perimeter'],
         gridOption: 'No Grid',
 
         screenOptions: ['No Screen', 'Half Screen', 'Full Screen'],
@@ -50,41 +95,19 @@ const state = proxy([
         incolorSelected: 'Beige',
 
     },
+
     {
-        id: 2,
-        name: 'Impervia',
-        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
-
-        gridStyles: ['Contour btw Glass', 'Contour outside Glass'],
-        gridStyle: 'Contour outside Glass',
-
-        gridOptions: ['No Grid', '1V1H', '2V1H', '2V2H', '2V0H', '2V1H2'],
-        gridOption: 'No Grid',
-
-        screenOptions: ['No Screen', 'Half Screen T', 'Half Screen D', 'Full Screen'],
-        screenOption: 'No Screen',
-
-        colorInOutDiff: false,
-        color: ['White', 'Brown', 'Black', 'Tan', 'Morning Sky', 'Brown/White', 'Black/White', 'Tan/White', 'Morning Sky/White'],
-        colorSelected: 'White',
-        exColor: [],
-        inColor: [],
-        excolorSelected: '',
-        incolorSelected: '',
-
-    },
-    {
-        id: 3,
+        id: 4,
         name: 'Lifestyle',
         anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
 
-        gridStyles: ['Contour btw Glass', 'Contour outside Glass'],
-        gridStyle: 'Contour outside Glass',
+        gridStyles: ['GBG Contoured', 'SDL Contoured'],
+        gridStyle: 'GBG Contoured',
 
-        gridOptions: ['No Grid', '1V1H', '2V1H', '2V2H', '2V0H', '2V1H2'],
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V1H', '2V2H', 'Prairie', 'Perimeter'],
         gridOption: 'No Grid',
 
-        screenOptions: ['No Screen', 'Half Screen T', 'Half Screen D', 'Full Screen'],
+        screenOptions: ['No Screen', 'Half Screen', 'Full Screen'],
         screenOption: 'No Screen',
 
         colorInOutDiff: true,
@@ -97,50 +120,29 @@ const state = proxy([
 
     },
     {
-        id: 4,
-        name: 'SolidView',
+        id: 5,
+        name: 'Impervia',
         anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
 
-        gridStyles: ['Flat btw Glass', 'Contour btw Glass'],
-        gridStyle: 'Flat btw Glass',
+        gridStyles: ['GBG Contoured', 'SDL Contoured'],
+        gridStyle: 'GBG Contoured',
 
-        gridOptions: ['No Grid', '1V1H', '2V1H', '2V0H', '1V0H'],
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V1H', '2V2H', 'Prairie', 'Perimeter'],
         gridOption: 'No Grid',
 
         screenOptions: ['No Screen', 'Half Screen', 'Full Screen'],
         screenOption: 'No Screen',
 
         colorInOutDiff: false,
-        color: ['White', 'Beige'],
+        color: ['White', 'Brown', 'Black', 'Tan', 'Morning Sky', 'Brown/White', 'Black/White', 'Tan/White', 'Morning Sky/White'],
         colorSelected: 'White',
-
         exColor: [],
         inColor: [],
         excolorSelected: '',
         incolorSelected: '',
+
     },
-    {
-        id: 5,
-        name: 'TitanEdge',
-        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
 
-        gridStyles: ['Flat btw Glass', 'Contour btw Glass'],
-        gridStyle: 'Flat btw Glass',
-
-        gridOptions: ['No Grid', '1V1H', '2V1H', '2V0H', '1V0H'],
-        gridOption: 'No Grid',
-
-        screenOptions: ['No Screen', 'Half Screen', 'Full Screen'],
-        screenOption: 'No Screen',
-
-        colorInOutDiff: true,
-        color: [],
-        colorSelected: '',
-        exColor: ['White', 'Beige', 'Cashmere', 'Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', 'Bronze', 'True Black', 'Cranberry', 'Burgandy'],
-        inColor: ['White', 'Beige'],
-        excolorSelected: 'White',
-        incolorSelected: 'White',
-    },
 ]
 )
 

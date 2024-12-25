@@ -141,7 +141,7 @@ function ListGrid({ _snap }) {
             <div className="relative mt-2 w-full md:w-36">
                 <ListboxButton className="relative w-full cursor-default border bg-white bg-opacity-25 py-1.5 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm/6">
                     <span className="flex items-center">
-                        <span className="block uppercase text-xs text-center w-full">grid options</span>
+                        <span className="block uppercase text-xs text-center w-full">grid patterns</span>
                     </span>
                 </ListboxButton>
 
@@ -220,7 +220,7 @@ function ListStyleGrid() {
             <div className="relative mt-2 w-full md:w-36">
                 <ListboxButton className="relative w-full cursor-default border bg-white bg-opacity-25 py-1.5 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm/6">
                     <span className="flex items-center">
-                        <span className="block uppercase text-xs text-center w-full">grid style</span>
+                        <span className="block uppercase text-xs text-center w-full">grid styles</span>
                     </span>
                 </ListboxButton>
 

@@ -66,7 +66,7 @@ export function Impervia(props) {
       case _win.color[7]:
         return materials.Tan;
       case _win.color[8]:
-        return materials.White;
+        return materials.MorningSkyGray;
       default:
         return 'Invalid value';
     }
@@ -87,13 +87,8 @@ export function Impervia(props) {
     let _style = _win.gridStyles[style - 1];
     let _styleGrid = _win.gridStyle
 
-    if (_styleGrid != 'Contour outside Glass') {
-      return (_op == _win.gridOption && style == 2) ? true : false;
-    } else {
-      return (_op == _win.gridOption && style == 2 || _op == _win.gridOption && style == 3) ? true : false;
-    }
+    return (_op == _win.gridOption && _style == _win.gridStyle) ? true : false;
   }
-
   useFrame((state, delta) => {
     //!_gl.intro && easing.dampE(fullWindow.current.rotation, [0, 45, 0], 0.5, delta)
     _win.anims[0] && !_win.anims[1] ? easing.damp3(frame1.current.position, [0, restPosF1 - 0.5, 0], 0.4, delta) : easing.damp3(frame1.current.position, [0, restPosF1, 0], 0.4, delta)
@@ -107,85 +102,97 @@ export function Impervia(props) {
   })
   return (
 
-    <group ref={fullWindow} {...props} dispose={null}>
-      <group visible={false}>
-        <mesh geometry={nodes.Black.geometry} material={materials.Black} position={[0, 0.006, 0]} />
-        <mesh geometry={nodes.Brown.geometry} material={materials.Brown} position={[0.09, -0.443, 0]} />
-        <mesh geometry={nodes.MorningSkyGray.geometry} material={materials.MorningSkyGray} position={[0.09, -0.443, 0]} />
-        <mesh geometry={nodes.Tan.geometry} material={materials.Tan} position={[0.09, -0.443, 0]} />
-        <mesh geometry={nodes.White.geometry} material={materials['White.001']} position={[0, 0.006, 0]} />
-      </group>
+    <>
 
-      <group ref={frame1} position={[0, -1 * offsetF1, 0]}>
-        <group position={[0, offsetF1, 0]}>
-          <mesh geometry={nodes.frame1_glass.geometry} material={materials['glass.001']} />
-          <mesh geometry={nodes.frame1_p1.geometry} material={matInterior()} />
-          <mesh geometry={nodes.frame1_1.geometry} material={matExterior()} />
-          <mesh geometry={nodes.frame1_2.geometry} material={matInterior()} />
-          <mesh geometry={nodes.contour0_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 0)} />
-          <mesh geometry={nodes.contour0_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 0)} />
-          <mesh geometry={nodes.contour0_up_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 0)} />
-          <mesh geometry={nodes.contour0_up_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 0)} />
-          <mesh geometry={nodes.contour1_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 1)} />
-          <mesh geometry={nodes.contour1_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 1)} />
-          <mesh geometry={nodes.contour1_up_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 1)} />
-          <mesh geometry={nodes.contour1_up_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 1)} />
-          <mesh geometry={nodes.contour2_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 2)} />
-          <mesh geometry={nodes.contour2_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 2)} />
-          <mesh geometry={nodes.contour2_up_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 2)} />
-          <mesh geometry={nodes.contour2_up_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 2)} />
-          <mesh geometry={nodes.contour3_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 3)} />
-          <mesh geometry={nodes.contour3_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 3)} />
-          <mesh geometry={nodes.contour3_up_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 3)} />
-          <mesh geometry={nodes.contour3_up_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 3)} />
-          <mesh geometry={nodes.contour4_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 4)} />
-          <mesh geometry={nodes.contour4_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 4)} />
-          <mesh geometry={nodes.contour4_up_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 4)} />
-          <mesh geometry={nodes.contour4_up_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 4)} />
+      <group ref={fullWindow} {...props} dispose={null}>
+        <group visible={false}>
+          <mesh geometry={nodes.Black.geometry} material={materials.Black} />
+          <mesh geometry={nodes.Brown.geometry} material={materials.Brown} />
+          <mesh geometry={nodes.MorningSkyGray.geometry} material={materials.MorningSkyGray} />
+          <mesh geometry={nodes.Tan.geometry} material={materials.Tan} />
+          <mesh geometry={nodes.White.geometry} material={materials.White} />
         </group>
-      </group>
 
-      <group ref={frame2} position={[0, -1 * offsetF2, 0]}>
-        <group position={[0, offsetF2, 0]}>
-          <mesh geometry={nodes.frame2_glass.geometry} material={materials['glass.001']} />
-          <mesh geometry={nodes.frame2_p1.geometry} material={matInterior()} />
-          <mesh geometry={nodes.frame2_p2.geometry} material={matInterior()} />
-          <mesh geometry={nodes.frame2_1.geometry} material={matExterior()} />
-          <mesh geometry={nodes.frame2_2.geometry} material={matInterior()} />
-          <mesh geometry={nodes.contour0_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 0)} />
-          <mesh geometry={nodes.contour0_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 0)} />
-          <mesh geometry={nodes.contour0_down_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 0)} />
-          <mesh geometry={nodes.contour0_down_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 0)} />
-          <mesh geometry={nodes.contour1_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 1)} />
-          <mesh geometry={nodes.contour1_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 1)} />
-          <mesh geometry={nodes.contour1_down_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 1)} />
-          <mesh geometry={nodes.contour1_down_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 1)} />
-          <mesh geometry={nodes.contour2_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 2)} />
-          <mesh geometry={nodes.contour2_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 2)} />
-          <mesh geometry={nodes.contour2_down_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 2)} />
-          <mesh geometry={nodes.contour2_down_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 2)} />
-          <mesh geometry={nodes.contour3_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 3)} />
-          <mesh geometry={nodes.contour3_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 3)} />
-          <mesh geometry={nodes.contour3_down_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 3)} />
-          <mesh geometry={nodes.contour3_down_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 3)} />
-          <mesh geometry={nodes.contour4_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 4)} />
-          <mesh geometry={nodes.contour4_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 4)} />
-          <mesh geometry={nodes.contour4_down_out_1.geometry} material={matExterior()} visible={gridSwitch(3, 4)} />
-          <mesh geometry={nodes.contour4_down_out_2.geometry} material={matInterior()} visible={gridSwitch(3, 4)} />
+        <group ref={frame1} position={[0, -1 * offsetF1, 0]}>
+          <group position={[0, offsetF1, 0]}>
+            <mesh geometry={nodes.frame1_glass.geometry} material={materials['glass.001']} />
+            <mesh geometry={nodes.frame1_p1.geometry} material={matInterior()} />
+            <mesh geometry={nodes.frame1_1.geometry} material={matExterior()} />
+            <mesh geometry={nodes.frame1_2.geometry} material={matInterior()} />
+
+            <mesh geometry={nodes.gbg0_up_1.geometry} material={matExterior()} visible={gridSwitch(1, 0)} />
+            <mesh geometry={nodes.gbg0_up_2.geometry} material={matInterior()} visible={gridSwitch(1, 0)} />
+            <mesh geometry={nodes.sdl0_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 0)} />
+            <mesh geometry={nodes.sdl0_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 0)} />
+            <mesh geometry={nodes.gbg1_up_1.geometry} material={matExterior()} visible={gridSwitch(1, 1)} />
+            <mesh geometry={nodes.gbg1_up_2.geometry} material={matInterior()} visible={gridSwitch(1, 1)} />
+            <mesh geometry={nodes.sdl1_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 1)} />
+            <mesh geometry={nodes.sdl1_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 1)} />
+            <mesh geometry={nodes.gbg2_up_1.geometry} material={matExterior()} visible={gridSwitch(1, 2)} />
+            <mesh geometry={nodes.gbg2_up_2.geometry} material={matInterior()} visible={gridSwitch(1, 2)} />
+            <mesh geometry={nodes.sdl2_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 2)} />
+            <mesh geometry={nodes.sdl2_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 2)} />
+            <mesh geometry={nodes.gbg3_up_1.geometry} material={matExterior()} visible={gridSwitch(1, 3)} />
+            <mesh geometry={nodes.gbg3_up_2.geometry} material={matInterior()} visible={gridSwitch(1, 3)} />
+            <mesh geometry={nodes.sdl3_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 3)} />
+            <mesh geometry={nodes.sdl3_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 3)} />
+            <mesh geometry={nodes.gbg4_up_1.geometry} material={matExterior()} visible={gridSwitch(1, 4)} />
+            <mesh geometry={nodes.gbg4_up_2.geometry} material={matInterior()} visible={gridSwitch(1, 4)} />
+            <mesh geometry={nodes.sdl4_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 4)} />
+            <mesh geometry={nodes.sdl4_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 4)} />
+            <mesh geometry={nodes.gbg5_up_1.geometry} material={matExterior()} visible={gridSwitch(1, 5)} />
+            <mesh geometry={nodes.gbg5_up_2.geometry} material={matInterior()} visible={gridSwitch(1, 5)} />
+            <mesh geometry={nodes.sdl5_up_1.geometry} material={matExterior()} visible={gridSwitch(2, 5)} />
+            <mesh geometry={nodes.sdl5_up_2.geometry} material={matInterior()} visible={gridSwitch(2, 5)} />
+          </group>
         </group>
+
+        <group ref={frame2} position={[0, -1 * offsetF2, 0]}>
+          <group position={[0, offsetF2, 0]}>
+            <mesh geometry={nodes.frame2_glass.geometry} material={materials['glass.001']} />
+            <mesh geometry={nodes.frame2_p1.geometry} material={matInterior()} />
+            <mesh geometry={nodes.frame2_p2.geometry} material={matInterior()} />
+            <mesh geometry={nodes.frame2_1.geometry} material={matExterior()} />
+            <mesh geometry={nodes.frame2_2.geometry} material={matInterior()} />
+
+            <mesh geometry={nodes.gbg0_down_1.geometry} material={matExterior()} visible={gridSwitch(1, 0)} />
+            <mesh geometry={nodes.gbg0_down_2.geometry} material={matInterior()} visible={gridSwitch(1, 0)} />
+            <mesh geometry={nodes.sdl0_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 0)} />
+            <mesh geometry={nodes.sdl0_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 0)} />
+            <mesh geometry={nodes.gbg1_down_1.geometry} material={matExterior()} visible={gridSwitch(1, 1)} />
+            <mesh geometry={nodes.gbg1_down_2.geometry} material={matInterior()} visible={gridSwitch(1, 1)} />
+            <mesh geometry={nodes.sdl1_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 1)} />
+            <mesh geometry={nodes.sdl1_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 1)} />
+            <mesh geometry={nodes.gbg2_down_1.geometry} material={matExterior()} visible={gridSwitch(1, 2)} />
+            <mesh geometry={nodes.gbg2_down_2.geometry} material={matInterior()} visible={gridSwitch(1, 2)} />
+            <mesh geometry={nodes.sdl2_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 2)} />
+            <mesh geometry={nodes.sdl2_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 2)} />
+            <mesh geometry={nodes.gbg3_down_1.geometry} material={matExterior()} visible={gridSwitch(1, 3)} />
+            <mesh geometry={nodes.gbg3_down_2.geometry} material={matInterior()} visible={gridSwitch(1, 3)} />
+            <mesh geometry={nodes.sdl3_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 3)} />
+            <mesh geometry={nodes.sdl3_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 3)} />
+            <mesh geometry={nodes.gbg4_down_1.geometry} material={matExterior()} visible={gridSwitch(1, 4)} />
+            <mesh geometry={nodes.gbg4_down_2.geometry} material={matInterior()} visible={gridSwitch(1, 4)} />
+            <mesh geometry={nodes.sdl4_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 4)} />
+            <mesh geometry={nodes.sdl4_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 4)} />
+            <mesh geometry={nodes.gbg5_down_1.geometry} material={matExterior()} visible={gridSwitch(1, 5)} />
+            <mesh geometry={nodes.gbg5_down_2.geometry} material={matInterior()} visible={gridSwitch(1, 5)} />
+            <mesh geometry={nodes.sdl5_down_1.geometry} material={matExterior()} visible={gridSwitch(2, 5)} />
+            <mesh geometry={nodes.sdl5_down_2.geometry} material={matInterior()} visible={gridSwitch(2, 5)} />
+          </group>
+        </group>
+
+        <mesh geometry={nodes.frame3_full_glass.geometry} material={materials['glass.001']} visible={switchScreen('Full Screen')} />
+        <mesh geometry={nodes.frame3_half_down_glass.geometry} material={materials['glass.001']} visible={switchScreen('Half Screen')} />
+        <mesh geometry={nodes.frame3_full_1.geometry} material={matExterior()} visible={switchScreen('Full Screen')} />
+        <mesh geometry={nodes.frame3_full_2.geometry} material={matInterior()} visible={switchScreen('Full Screen')} />
+        <mesh geometry={nodes.frame3_half_down_1.geometry} material={materials.Color1} visible={switchScreen('Half Screen')} />
+        <mesh geometry={nodes.frame3_half_down_2.geometry} material={matInterior()} visible={switchScreen('Half Screen')} />
+        <mesh geometry={nodes.window1002.geometry} material={matExterior()} />
+        <mesh geometry={nodes.window1002_1.geometry} material={matInterior()} />
       </group>
-      <mesh geometry={nodes.frame3_full_glass.geometry} material={materials['glass.001']} visible={switchScreen('Full Screen')} />
-      <mesh geometry={nodes.frame3_half_up_glass.geometry} material={materials['glass.001']} visible={switchScreen('Half Screen T')} />
-      <mesh geometry={nodes.frame3_half_down_glass.geometry} material={materials['glass.001']} visible={switchScreen('Half Screen D')} />
-      <mesh geometry={nodes.frame3_full_1.geometry} material={matExterior()} visible={switchScreen('Full Screen')} />
-      <mesh geometry={nodes.frame3_full_2.geometry} material={matInterior()} visible={switchScreen('Full Screen')} />
-      <mesh geometry={nodes.frame3_half_down_1.geometry} material={matExterior()} visible={switchScreen('Half Screen D')} />
-      <mesh geometry={nodes.frame3_half_down_2.geometry} material={matInterior()} visible={switchScreen('Half Screen D')} />
-      <mesh geometry={nodes.frame3_half_up_1.geometry} material={matExterior()} visible={switchScreen('Half Screen T')} />
-      <mesh geometry={nodes.frame3_half_up_2.geometry} material={matInterior()} visible={switchScreen('Half Screen T')} />
-      <mesh geometry={nodes.window1002.geometry} material={matExterior()} />
-      <mesh geometry={nodes.window1002_1.geometry} material={matInterior()} />
-    </group>
+    </>
+
   )
 }
 

@@ -31,12 +31,12 @@ export function Overlay() {
         exit: { opacity: 0, transition: { ...transition, delay: 0 } }
     }
     const products = [
-        { id: 0, image: image1, comp: "pro1", name: 'FreshSight Series' },
-        { id: 1, image: image2, comp: "pro1", name: 'DreamGlaze' },
-        { id: 2, image: image3, comp: "pro1", name: 'Impervia By Pella' },
-        { id: 3, image: image4, comp: "pro1", name: 'Lifestyle By Pella' },
-        { id: 4, image: image5, comp: "pro1", name: 'SolidView Series' },
-        { id: 5, image: image6, comp: "pro1", name: 'TitanEdge' },
+        { id: 0, image: image1, comp: "pro1", name: 'FreshSight' },
+        { id: 1, image: image5, comp: "pro1", name: 'SolidView' },
+        { id: 2, image: image6, comp: "pro1", name: 'TitanEdge' },
+        { id: 3, image: image2, comp: "pro1", name: 'DreamGlaze' },
+        { id: 4, image: image4, comp: "pro1", name: 'Lifestyle By Pella' },
+        { id: 5, image: image3, comp: "pro1", name: 'Impervia By Pella' },
     ];
 
     return (

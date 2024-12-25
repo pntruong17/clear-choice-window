@@ -17,15 +17,15 @@ function Window_1(props) {
             case 0:
                 return <FreshSight />
             case 1:
-                return <DreamGraze />
-            case 2:
-                return <Impervia />
-            case 3:
-                return <Lifestyle />
-            case 4:
                 return <SolidView />
-            case 5:
+            case 2:
                 return <TitanEdge />
+            case 3:
+                return <DreamGraze />
+            case 4:
+                return <Lifestyle />
+            case 5:
+                return <Impervia />
             default:
                 return <FreshSight />
         }

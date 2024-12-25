@@ -56,7 +56,7 @@ function Env0() {
   //   }
   // })
   return (
-    <Environment preset={_gl.envOption} background blur={0.3} />
+    <Environment preset={_gl.envOption} background blur={0.2} />
   )
 
 }
