@@ -186,7 +186,7 @@ export function Impervia(props) {
         <mesh geometry={nodes.frame3_half_down_glass.geometry} material={materials['glass.001']} visible={switchScreen('Half Screen')} />
         <mesh geometry={nodes.frame3_full_1.geometry} material={matExterior()} visible={switchScreen('Full Screen')} />
         <mesh geometry={nodes.frame3_full_2.geometry} material={matInterior()} visible={switchScreen('Full Screen')} />
-        <mesh geometry={nodes.frame3_half_down_1.geometry} material={materials.Color1} visible={switchScreen('Half Screen')} />
+        <mesh geometry={nodes.frame3_half_down_1.geometry} material={matExterior()} visible={switchScreen('Half Screen')} />
         <mesh geometry={nodes.frame3_half_down_2.geometry} material={matInterior()} visible={switchScreen('Half Screen')} />
         <mesh geometry={nodes.window1002.geometry} material={matExterior()} />
         <mesh geometry={nodes.window1002_1.geometry} material={matInterior()} />
