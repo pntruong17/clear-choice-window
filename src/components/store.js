@@ -88,7 +88,7 @@ const state = proxy([
         color: [],
         colorSelected: '',
 
-        exColor: ['Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        exColor: ['White', 'Beige'],//['Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
         inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
 
         excolorSelected: 'Cashmere',
@@ -114,7 +114,7 @@ const state = proxy([
         color: [],
         colorSelected: '',
         exColor: ['Black', 'White', 'Brown', 'Fossil', 'Iron Ore', 'Portabello', 'Putty', 'Almond', 'Brick Red', 'Hartford Green', 'Wolf Gray'],
-        inColor: ['Pine', 'White', 'Linen White', 'Golden Oak Stain', 'Early American Stain', 'Provincial Stain', 'Black'],
+        inColor: ['Unfinished Pine', 'White', 'Linen White', 'Golden Oak Stain', 'Early American Stain', 'Provincial Stain', 'Black'],
         excolorSelected: 'Black',
         incolorSelected: 'Pine',
 
