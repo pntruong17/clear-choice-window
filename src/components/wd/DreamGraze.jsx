@@ -46,50 +46,42 @@ export function DreamGraze(props) {
         return materials.White;
       case _win.exColor[1]:
         return materials.Beige;
-
+      case _win.exColor[2]:
+        return materials.Cashmere;
+      case _win.exColor[3]:
+        return materials.Ivory;
+      case _win.exColor[4]:
+        return materials.Wicker;
+      case _win.exColor[5]:
+        return materials.Sandalwood;
+      case _win.exColor[6]:
+        return materials.Clay;
+      case _win.exColor[7]:
+        return materials.Sandtone;
+      case _win.exColor[8]:
+        return materials.AmericanBrown;
+      case _win.exColor[9]:
+        return materials.UniversalBrown;
+      case _win.exColor[10]:
+        return materials.WedgeWoodBlue;
+      case _win.exColor[11]:
+        return materials.OldWorldBlue;
+      case _win.exColor[12]:
+        return materials.ForestGreen;
+      case _win.exColor[13]:
+        return materials.Sable;
+      case _win.exColor[14]:
+        return materials.Bronze;
+      case _win.exColor[15]:
+        return materials.Black;
+      case _win.exColor[16]:
+        return materials.Cranberry;
+      case _win.exColor[17]:
+        return materials.Burgundy;
       default:
         return 'Invalid value';
     }
   }
-
-  // function matExterior() {
-  //   switch (_win.excolorSelected) {
-  //     case _win.exColor[0]:
-  //       return materials.Cashmere;
-  //     case _win.exColor[1]:
-  //       return materials.Ivory;
-  //     case _win.exColor[2]:
-  //       return materials.Wicker;
-  //     case _win.exColor[3]:
-  //       return materials.Sandalwood;
-  //     case _win.exColor[4]:
-  //       return materials.Clay;
-  //     case _win.exColor[5]:
-  //       return materials.Sandtone;
-  //     case _win.exColor[6]:
-  //       return materials.AmericanBrown;
-  //     case _win.exColor[7]:
-  //       return materials.UniversalBrown;
-  //     case _win.exColor[8]:
-  //       return materials.WedgeWoodBlue;
-  //     case _win.exColor[9]:
-  //       return materials.OldWorldBlue;
-  //     case _win.exColor[10]:
-  //       return materials.ForestGreen;
-  //     case _win.exColor[11]:
-  //       return materials.Sable;
-  //     case _win.exColor[12]:
-  //       return materials.Bronze;
-  //     case _win.exColor[13]:
-  //       return materials.Black;
-  //     case _win.exColor[14]:
-  //       return materials.Cranberry;
-  //     case _win.exColor[15]:
-  //       return materials.Burgundy;
-  //     default:
-  //       return 'Invalid value';
-  //   }
-  // }
 
   function switchScreen(_screenOption) {
     if (_win.screenOption == _screenOption) {
