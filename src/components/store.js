@@ -142,6 +142,82 @@ const state = proxy([
         incolorSelected: '',
 
     },
+    {
+        id: 6,
+        name: 'Clear View',
+        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
+        isForward: false,
+        isAnimating: false,
+
+        gridStyles: ['GBG Flat', 'GBG Contoured', 'SDL Contoured'],
+        gridStyle: 'SDL Contoured',
+
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V3H', 'Prairie'],
+        gridOption: 'No Grid',
+
+        screenOptions: ['No Screen', 'Full Screen'],
+        screenOption: 'No Screen',
+
+        colorInOutDiff: true,
+
+        exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
+        hardColor: ['White', 'Beige', 'Bronze', 'Black', 'Brown'],
+        excolorSelected: 'Cashmere',
+        incolorSelected: 'Beige',
+        hardColorSelected: 'White',
+
+    },
+    {
+        id: 7,
+        name: 'Impervia Casement',
+        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
+        isForward: false,
+        isAnimating: false,
+
+        gridStyles: ['GBG Flat', 'GBG Contoured', 'SDL Contoured'],
+        gridStyle: 'SDL Contoured',
+
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V3H', 'Prairie'],
+        gridOption: 'No Grid',
+
+        screenOptions: ['No Screen'],
+        screenOption: 'No Screen',
+
+        colorInOutDiff: false,
+        color: ['White', 'Brown', 'Black', 'Tan', 'Morning Sky', 'Brown/White', 'Black/White', 'Tan/White', 'Morning Sky/White'],
+        colorSelected: 'White',
+        exColor: [],
+        inColor: [],
+        excolorSelected: '',
+        incolorSelected: '',
+
+    },
+    {
+        id: 8,
+        name: 'Lifestyle Casement',
+        anims: [false, false, false], //0: under frame slides, 1: under frame tilts, 2: upper frame slide
+
+        gridStyles: ['GBG Flat', 'GBG Contoured', 'SDL Contoured'],
+        gridStyle: 'SDL Contoured',
+
+        gridOptions: ['No Grid', '1V0H', '1V1H', '2V3H', 'Prairie'],
+        gridOption: 'No Grid',
+
+        screenOptions: ['No Screen'],
+        screenOption: 'No Screen',
+
+        colorInOutDiff: true,
+
+        exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
+        hardColor: ['White', 'Beige', 'Bronze', 'Black', 'Brown'],
+        excolorSelected: 'Cashmere',
+        incolorSelected: 'Beige',
+        hardColorSelected: 'White',
+
+    },
+
 
 ]
 )

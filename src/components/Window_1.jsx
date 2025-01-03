@@ -5,6 +5,9 @@ import { SolidView } from './wd/SolidView'
 import { TitanEdge } from './wd/TitanEdge'
 import { Lifestyle } from './wd/Lifestyle'
 import { Impervia } from './wd/Impervia'
+import { ClearView } from './wd/ClearView'
+import { ImperviaCasement } from './wd/ImperviaCasement'
+import { LifestyleCasement } from './wd/LifestyleCasement'
 import { gl } from '../global'
 import { useSnapshot } from 'valtio'
 
@@ -26,6 +29,12 @@ function Window_1(props) {
                 return <Lifestyle />
             case 5:
                 return <Impervia />
+            case 6:
+                return <ClearView />
+            case 7:
+                return <ImperviaCasement />
+            case 8:
+                return <LifestyleCasement />
             default:
                 return <FreshSight />
         }

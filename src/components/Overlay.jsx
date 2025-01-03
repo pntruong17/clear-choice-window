@@ -17,6 +17,10 @@ import image4 from '../assets/LifeStyle.png';
 import image5 from '../assets/SolidView.png';
 import image6 from '../assets/TitanEdge.png';
 
+import image7 from '../assets/clearview.png';
+import image8 from '../assets/Impervia_casement.png';
+import image9 from '../assets/Lifestyle_casement.png';
+
 export function Overlay() {
 
     const _gl = useSnapshot(gl)
@@ -37,6 +41,10 @@ export function Overlay() {
         { id: 3, image: image2, comp: "pro1", name: 'DreamGlaze' },
         { id: 4, image: image4, comp: "pro1", name: 'Lifestyle By Pella' },
         { id: 5, image: image3, comp: "pro1", name: 'Impervia By Pella' },
+
+        { id: 6, image: image7, comp: "pro1", name: 'ClearView' },
+        { id: 7, image: image8, comp: "pro1", name: 'Impervia Casement' },
+        { id: 8, image: image9, comp: "pro1", name: 'Lifestyle Casement' },
     ];
 
     return (

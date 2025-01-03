@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { useSnapshot } from 'valtio'
 import { gl } from '../global'
 import { state } from './store'
@@ -10,9 +11,20 @@ import logo2 from '../assets/fa.png'
 export default function Customizer() {
     const _gl = useSnapshot(gl)
     const _win = useSnapshot(state)[_gl.window]
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
     const handleMusic = (bool) => {
         gl.music = bool
     }
+    function disabledTimer() {
+        setIsButtonDisabled(true); // Disable the button
+        setTimeout(() => {
+            setIsButtonDisabled(false); // Enable the button after 4 seconds
+        }, 4000);
+    }
+    useEffect(() => {
+
+    }, [isButtonDisabled])
+
     return (
         <div className="customizer bg-[#FDFFFF]">
             <div className="absolute top-[40px] left-[30px] h-10 md:h-20 w-64 flex flex-row items-center">
@@ -23,17 +35,32 @@ export default function Customizer() {
 
             <div className="absolute left-[20px] bottom-1/2">
                 <div className="flex flex-col gap-5">
-                    <button className="cursor-pointer text-xs rounded-md px-1 py-5 bg-white bg-opacity-65 hover:bg-black hover:text-white ease-in-out transition-all duration-200"
-                        onClick={() => (state[_gl.window].anims[0] = !state[_gl.window].anims[0], playSlide())}>
-                        {/* <img src={'three2_thumb.png'} alt="brand" /> */}
-                        <p className='uppercase vert--text'>Slides</p>
-                    </button>
-                    <button className="cursor-pointer text-xs  rounded-md px-1 py-5 bg-white bg-opacity-65 hover:bg-black hover:text-white ease-in-out transition-all duration-200"
-                        onClick={() => (state[_gl.window].anims[1] = !state[_gl.window].anims[1], playSlide())}>
-                        {/* <img src={'three2_thumb.png'} alt="brand" /> */}
-                        <p className='uppercase vert--text'>Tilts</p>
-                    </button>
+                    {_gl.window < 6 && (
+                        <button className="cursor-pointer text-xs rounded-md px-1 py-5 bg-white bg-opacity-65 hover:bg-black hover:text-white ease-in-out transition-all duration-200"
+                            onClick={() => (state[_gl.window].anims[0] = !state[_gl.window].anims[0], playSlide())}>
+                            {/* <img src={'three2_thumb.png'} alt="brand" /> */}
+                            <p className='uppercase vert--text'>Slides</p>
+                        </button>
+                    )}
+                    {_gl.window < 6 && (
+                        <button className="cursor-pointer text-xs  rounded-md px-1 py-5 bg-white bg-opacity-65 hover:bg-black hover:text-white ease-in-out transition-all duration-200"
+                            onClick={() => (state[_gl.window].anims[1] = !state[_gl.window].anims[1], playSlide())}>
+                            {/* <img src={'three2_thumb.png'} alt="brand" /> */}
+                            <p className='uppercase vert--text'>Tilts</p>
+                        </button>
+                    )}
+                    {_gl.window >= 6 && (
+                        <button disabled={isButtonDisabled} className="cursor-pointer text-xs rounded-md px-1 py-5 bg-white bg-opacity-65 hover:bg-black hover:text-white ease-in-out transition-all duration-200"
+                            onClick={() => {
+                                state[_gl.window].isForward = !state[_gl.window].isForward
 
+                                state[_gl.window].isAnimating = true
+                                disabledTimer()
+                            }}>
+                            {/* <img src={'three2_thumb.png'} alt="brand" /> */}
+                            <p className='uppercase vert--text'>Toggle</p>
+                        </button>
+                    )}
                 </div>
             </div>
             <div className="absolute right-0 md:bottom-0 w-36 md:w-full md:h-16 h-full  ">

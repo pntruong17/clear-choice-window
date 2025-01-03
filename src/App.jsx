@@ -25,16 +25,21 @@ function App({ position = [0, 0, 1.68], fov = 50 }) {
         <ambientLight intensity={0.25 * Math.PI} />
         {/* <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/potsdamer_platz_1k.hdr" /> */}
         {_gl.bgStyle == 'flats' ? <Env1 /> : <Env0 />}
-        <PresentationControls
+        {/* <PresentationControls
           speed={1.5}
           global
           zoom={1.5}
           polar={[-1, Math.PI / 4]}
         >
-          <Suspense fallback={''}>
-            <Window_1 />
-          </Suspense>
-        </PresentationControls>
+        </PresentationControls> */}
+        <Suspense fallback={''}>
+          <Window_1 />
+        </Suspense>
+        <OrbitControls
+          enableZoom={true} // Bật/tắt zoom
+          maxPolarAngle={Math.PI / 2} // Giới hạn góc quay
+          minPolarAngle={0} // Giới hạn góc quay
+        />
       </Canvas>
       <Overlay />
 
