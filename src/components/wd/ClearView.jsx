@@ -153,21 +153,21 @@ export function ClearView(props) {
         <mesh name="glass" geometry={nodes.glass.geometry} material={materials['glass.001']} position={[0, 0, 0.013]} />
         <mesh name="lock4" geometry={nodes.lock4.geometry} material={matInterior()} position={[0.231, -0.116, -0.057]} />
         <mesh name="lock3" geometry={nodes.lock3.geometry} material={matInterior()} position={[0.228, -0.087, -0.056]} />
-        <mesh name="moc2" geometry={nodes.moc2.geometry} material={nodes.moc2.material} position={[0.228, -0.185, -0.017]} />
+        <mesh name="moc2" geometry={nodes.moc2.geometry} material={materials.metal} position={[0.228, -0.185, -0.017]} />
         <mesh name="metal1" geometry={nodes.metal1.geometry} material={materials.metal} position={[0.219, -0.086, 0.001]} />
-        <mesh name="bar4" geometry={nodes.bar4.geometry} material={nodes.bar4.material} position={[0.062, 0.317, 0.01]} rotation={[0, 0.001, 0]} />
-        <mesh name="Bolt005" geometry={nodes.Bolt005.geometry} material={nodes.Bolt005.material} position={[0.061, -0.321, 0.01]} />
+        <mesh name="bar4" geometry={nodes.bar4.geometry} material={materials.metal} position={[0.062, 0.317, 0.01]} rotation={[0, 0.001, 0]} />
+        <mesh name="Bolt005" geometry={nodes.Bolt005.geometry} material={materials.metal} position={[0.061, -0.321, 0.01]} />
         <mesh name="metal6" geometry={nodes.metal6.geometry} material={materials.metal} position={[-0.24, 0, 0.024]} />
-        <mesh name="bar3" geometry={nodes.bar3.geometry} material={nodes.bar3.material} position={[-0.009, -0.32, 0.001]} rotation={[0, 0.019, 0]} />
-        <mesh name="bar2" geometry={nodes.bar2.geometry} material={nodes.bar2.material} position={[0.016, 0.322, 0.01]} />
-        <mesh name="bar1" geometry={nodes.bar1.geometry} material={nodes.bar1.material} position={[0.016, -0.322, 0.01]} />
-        <mesh name="Cube031" geometry={nodes.Cube031.geometry} material={nodes.Cube031.material} position={[-0.027, 0.315, -0.013]} rotation={[0, 0.005, 0]} />
+        <mesh name="bar3" geometry={nodes.bar3.geometry} material={materials.metal} position={[-0.009, -0.32, 0.001]} rotation={[0, 0.019, 0]} />
+        <mesh name="bar2" geometry={nodes.bar2.geometry} material={materials.metal} position={[0.016, 0.322, 0.01]} />
+        <mesh name="bar1" geometry={nodes.bar1.geometry} material={materials.metal} position={[0.016, -0.322, 0.01]} />
+        <mesh name="Cube031" geometry={nodes.Cube031.geometry} material={materials.metal} position={[-0.027, 0.315, -0.013]} rotation={[0, 0.005, 0]} />
         <mesh name="lock2" geometry={nodes.lock2.geometry} material={nodes.lock2.material} position={[0.023, -0.316, -0.061]} rotation={[0.379, -1.511, 1.725]} />
         <mesh name="metal2" geometry={nodes.metal2.geometry} material={materials.metal} position={[0.227, -0.044, 0.005]} />
-        <mesh name="moc1" geometry={nodes.moc1.geometry} material={nodes.moc1.material} position={[0.227, 0.178, 0.005]} />
+        <mesh name="moc1" geometry={nodes.moc1.geometry} material={materials.metal} position={[0.227, 0.178, 0.005]} />
         <mesh name="lock1" geometry={nodes.lock1.geometry} material={matInterior()} position={[0.031, -0.321, -0.047]} />
-        <mesh name="Bolt006" geometry={nodes.Bolt006.geometry} material={nodes.Bolt006.material} position={[-0.072, -0.321, 0.003]} rotation={[Math.PI, -1.224, Math.PI]} />
-        <mesh name="Bolt007" geometry={nodes.Bolt007.geometry} material={nodes.Bolt007.material} position={[-0.108, 0.312, -0.011]} rotation={[0, 1.477, 0]} />
+        <mesh name="Bolt006" geometry={nodes.Bolt006.geometry} material={materials.metal} position={[-0.072, -0.321, 0.003]} rotation={[Math.PI, -1.224, Math.PI]} />
+        <mesh name="Bolt007" geometry={nodes.Bolt007.geometry} material={materials.metal} position={[-0.108, 0.312, -0.011]} rotation={[0, 1.477, 0]} />
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={nodes.Cube027.material} position={[-0.073, -0.317, 0.002]} rotation={[0, 0.071, 0]} />
         <mesh name="Plane001" geometry={nodes.Plane001.geometry} material={matInterior()} position={[0.026, -0.315, -0.067]} rotation={[-2.845, -0.973, 1.635]} />
         <mesh name="metal3" geometry={nodes.metal3.geometry} material={materials.metal} position={[0.22, -0.106, -0.005]} rotation={[0, 0, -Math.PI / 2]} />

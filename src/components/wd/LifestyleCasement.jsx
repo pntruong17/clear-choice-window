@@ -117,6 +117,26 @@ export function LifestyleCasement(props) {
             </group>
 
             <group name="Scene">
+                <mesh name="module_lock1" geometry={nodes.module_lock1.geometry} material={materials.metal} position={[0.366, -0.378, 0.046]} />
+                <mesh name="module_lock2" geometry={nodes.module_lock2.geometry} material={materials.metal} position={[0.364, -0.359, 0.04]} rotation={[0, 0, -Math.PI / 2]} />
+                <mesh name="module_lock3" geometry={nodes.module_lock3.geometry} material={materials['Black.003']} position={[0.37, 0.175, 0.05]} />
+                <mesh name="module_lock4" geometry={nodes.module_lock4.geometry} material={materials.metal} position={[-0.368, 0, 0.067]} rotation={[Math.PI, 0, Math.PI]} />
+                <mesh name="new_bar3" geometry={nodes.new_bar3.geometry} material={materials.metal} position={[-0.26, -0.616, 0.045]} rotation={[0, 0.024, 0]} />
+                <mesh name="new_lock1" geometry={nodes.new_lock1.geometry} material={materials.Black} position={[0.026, -0.617, -0.004]} rotation={[-2.263, -0.973, 1.635]} />
+                <mesh name="new_bar1" geometry={nodes.new_bar1.geometry} material={materials.metal} position={[-0.035, -0.621, 0.052]} />
+                <mesh name="new_bar4" geometry={nodes.new_bar4.geometry} material={materials.metal} position={[-0.268, -0.622, 0.043]} rotation={[-Math.PI, 0.103, -Math.PI]} />
+                <mesh name="new_bar2" geometry={nodes.new_bar2.geometry} material={materials.metal} position={[-0.088, -0.619, 0.051]} rotation={[0, -0.036, 0]} />
+                <mesh name="new_lock2" geometry={nodes.new_lock2.geometry} material={materials.Black} position={[0.031, -0.631, 0.007]} rotation={[0.583, 0, 0]} />
+                <mesh name="new_lock3" geometry={nodes.new_lock3.geometry} material={materials.Black} position={[0.023, -0.621, 0]} rotation={[0.962, -1.511, 1.725]} />
+                <mesh name="new_bolt1" geometry={nodes.new_bolt1.geometry} material={materials.metal} position={[-0.088, -0.619, 0.051]} rotation={[0, -1.067, 0]} />
+                <mesh name="new_bar5" geometry={nodes.new_bar5.geometry} material={materials.metal} position={[-0.128, -0.616, 0.045]} rotation={[Math.PI / 2, 0, Math.PI]} scale={[0.092, 0.003, 0.003]} />
+                <mesh name="new_bolt2" geometry={nodes.new_bolt2.geometry} material={nodes.new_bolt2.material} position={[-0.271, -0.622, 0.059]} rotation={[0, 0.473, 0]} />
+
+                <mesh name="bar" geometry={nodes.bar.geometry} material={materials.metal} position={[-0.191, -0.625, 0.052]} rotation={[0, 0.081, -0.031]} />
+                <mesh name="Bolt007" geometry={nodes.Bolt007.geometry} material={materials.metal} position={[-0.26, -0.617, 0.045]} rotation={[0, 1.495, 0]} />
+                <mesh name="Bolt003" geometry={nodes.Bolt003.geometry} material={materials.metal} position={[-0.104, -0.616, 0.042]} rotation={[0, -1.067, 0]} />
+                <mesh name="Bolt004" geometry={nodes.Bolt004.geometry} material={materials.metal} position={[-0.192, -0.624, 0.052]} rotation={[0, 0.473, 0]} />
+
                 <group name="window" position={[0, 0, 0.042]}>
                     <mesh name="window_1" geometry={nodes.window_1.geometry} material={matExterior()} />
                     <mesh name="window_2" geometry={nodes.window_2.geometry} material={matInterior()} />
@@ -131,11 +151,10 @@ export function LifestyleCasement(props) {
                     <mesh name="bar1002_1" geometry={nodes.bar1002_1.geometry} material={matExterior()} />
                     <mesh name="bar1002_2" geometry={nodes.bar1002_2.geometry} material={matInterior()} />
                 </group>
-                <group name="frame1" position={[0, 0, 0.042]}>
+                <group name="frame1" position={[-0.359, 0, 0.042]}>
                     <mesh name="frame1_1" geometry={nodes.frame1_1.geometry} material={matExterior()} />
                     <mesh name="frame1_2" geometry={nodes.frame1_2.geometry} material={matInterior()} />
                 </group>
-                <mesh name="lock" geometry={nodes.lock.geometry} material={materials.Black} position={[-0.002, -0.624, 0.003]} rotation={[-0.702, 0, 0]} scale={0.027} />
                 <group name="flat0" position={[0, 0, 0.063]} visible={gridSwitch(1, 0)}>
                     <mesh name="flat0_1" geometry={nodes.flat0_1.geometry} material={matExterior()} />
                     <mesh name="flat0_2" geometry={nodes.flat0_2.geometry} material={matInterior()} />

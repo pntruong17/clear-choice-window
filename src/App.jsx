@@ -37,8 +37,9 @@ function App({ position = [0, 0, 1.68], fov = 50 }) {
         </Suspense>
         <OrbitControls
           enableZoom={true} // Bật/tắt zoom
-          maxPolarAngle={Math.PI / 2} // Giới hạn góc quay
-          minPolarAngle={0} // Giới hạn góc quay
+          maxPolarAngle={Math.PI / 1.2} // Giới hạn góc quay
+          minPolarAngle={0.5} // Giới hạn góc quay
+
         />
       </Canvas>
       <Overlay />
@@ -61,7 +62,7 @@ function Env0() {
   //   }
   // })
   return (
-    <Environment preset={_gl.envOption} background blur={0.2} />
+    <Environment preset={_gl.envOption} background blur={0.35} />
   )
 
 }

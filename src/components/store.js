@@ -91,8 +91,8 @@ const state = proxy([
         exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
         inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
 
-        excolorSelected: 'Cashmere',
-        incolorSelected: 'Beige',
+        excolorSelected: 'White',
+        incolorSelected: 'White',
 
     },
 
@@ -115,8 +115,8 @@ const state = proxy([
         colorSelected: '',
         exColor: ['Black', 'White', 'Brown', 'Fossil', 'Iron Ore', 'Portabello', 'Putty', 'Almond', 'Brick Red', 'Hartford Green', 'Wolf Gray'],
         inColor: ['Unfinished Pine', 'White', 'Linen White', 'Golden Oak Stain', 'Early American Stain', 'Provincial Stain', 'Black'],
-        excolorSelected: 'Black',
-        incolorSelected: 'Pine',
+        excolorSelected: 'White',
+        incolorSelected: 'White',
 
     },
     {
@@ -163,8 +163,8 @@ const state = proxy([
         exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
         inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
         hardColor: ['White', 'Beige', 'Bronze', 'Black', 'Brown'],
-        excolorSelected: 'Cashmere',
-        incolorSelected: 'Beige',
+        excolorSelected: 'White',
+        incolorSelected: 'White',
         hardColorSelected: 'White',
 
     },
@@ -209,12 +209,17 @@ const state = proxy([
 
         colorInOutDiff: true,
 
-        exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
-        inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
+        exColor: ['Black', 'White', 'Brown', 'Fossil', 'Iron Ore', 'Portabello', 'Putty', 'Almond', 'Brick Red', 'Hartford Green', 'Wolf Gray'],
+        inColor: ['Unfinished Pine', 'White', 'Linen White', 'Golden Oak Stain', 'Early American Stain', 'Provincial Stain', 'Black'],
         hardColor: ['White', 'Beige', 'Bronze', 'Black', 'Brown'],
-        excolorSelected: 'Cashmere',
-        incolorSelected: 'Beige',
+        excolorSelected: 'White',
+        incolorSelected: 'White',
         hardColorSelected: 'White',
+
+        // exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        // inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
+        // excolorSelected: 'White',
+        // incolorSelected: 'White',
 
     },
 

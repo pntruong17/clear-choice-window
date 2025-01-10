@@ -128,9 +128,13 @@ export function ImperviaCasement(props) {
                 <mesh name="frame1001" geometry={nodes.frame1001.geometry} material={materials.Black} position={[-0.09, -0.608, -0.026]} rotation={[Math.PI, 0, Math.PI]} />
                 <mesh name="Bolt" geometry={nodes.Bolt.geometry} material={materials.Black} position={[-0.206, -0.606, -0.023]} rotation={[Math.PI / 2, 0, Math.PI]} scale={0.772} />
                 <mesh name="frame1002" geometry={nodes.frame1002.geometry} material={materials.Black} position={[-0.145, -0.604, -0.029]} rotation={[-Math.PI, 0.055, -Math.PI]} />
-                <mesh name="lock1" geometry={nodes.lock1.geometry} material={materials.Black} position={[0.36, -0.373, -0.063]} rotation={[Math.PI, 0, Math.PI]} />
+                <mesh name="lock1" geometry={nodes.lock1.geometry} material={materials.metal} position={[0.36, -0.373, -0.063]} rotation={[Math.PI, 0, Math.PI]} />
                 <mesh name="lock2" geometry={nodes.lock2.geometry} material={materials.Black} position={[0.361, -0.354, -0.061]} rotation={[Math.PI, 0, Math.PI]} />
                 <mesh name="lock3" geometry={nodes.lock3.geometry} material={materials.Black} position={[0.361, -0.354, -0.061]} rotation={[Math.PI, 0, Math.PI]} />
+                <mesh name="module_lock4" geometry={nodes.module_lock4.geometry} material={materials.metal} position={[-0.368, 0, -0.009]} rotation={[Math.PI, 0, Math.PI]} />
+                <mesh name="module_lock1" geometry={nodes.module_lock1.geometry} material={materials.metal} position={[0.359, -0.378, -0.032]} />
+                <mesh name="module_lock2" geometry={nodes.module_lock2.geometry} material={materials.metal} position={[0.361, -0.359, -0.038]} rotation={[0, 0, -Math.PI / 2]} />
+                <mesh name="module_lock3" geometry={nodes.module_lock3.geometry} material={materials.Black} position={[0.367, 0.175, -0.028]} />
 
                 <group name="flat0" position={[0, 0, -0.014]} scale={1.049} visible={gridSwitch(1, 0)}>
                     <mesh name="flat0_1" geometry={nodes.flat0_1.geometry} material={matExterior()} />
