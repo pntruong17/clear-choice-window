@@ -17,6 +17,7 @@ export function ClearView(props) {
   const { actions, names } = useAnimations(animations, group)
   const _gl = useSnapshot(gl)
   const _win = useSnapshot(state)[_gl.window]
+  const colorFullWindow = "Full Black"
 
   useEffect(() => {
     if (_win.isAnimating) {
@@ -144,15 +145,15 @@ export function ClearView(props) {
       <group name="Scene">
         <group name="window001" position={[-0.11, 0, 0]}>
           <mesh name="w1" geometry={nodes.w1.geometry} material={matExterior()} />
-          <mesh name="w1_1" geometry={nodes.w1_1.geometry} material={matInterior()} />
+          <mesh name="w1_1" geometry={nodes.w1_1.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="window" position={[0, 0, -0.022]}>
           <mesh name="window_1" geometry={nodes.window_1.geometry} material={matExterior()} />
-          <mesh name="window_2" geometry={nodes.window_2.geometry} material={matInterior()} />
+          <mesh name="window_2" geometry={nodes.window_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <mesh name="glass" geometry={nodes.glass.geometry} material={materials['glass.001']} position={[0, 0, 0.013]} />
-        <mesh name="lock4" geometry={nodes.lock4.geometry} material={matInterior()} position={[0.231, -0.116, -0.057]} />
-        <mesh name="lock3" geometry={nodes.lock3.geometry} material={matInterior()} position={[0.228, -0.087, -0.056]} />
+        <mesh name="lock4" geometry={nodes.lock4.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} position={[0.231, -0.116, -0.057]} />
+        <mesh name="lock3" geometry={nodes.lock3.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} position={[0.228, -0.087, -0.056]} />
         <mesh name="moc2" geometry={nodes.moc2.geometry} material={materials.metal} position={[0.228, -0.185, -0.017]} />
         <mesh name="metal1" geometry={nodes.metal1.geometry} material={materials.metal} position={[0.219, -0.086, 0.001]} />
         <mesh name="bar4" geometry={nodes.bar4.geometry} material={materials.metal} position={[0.062, 0.317, 0.01]} rotation={[0, 0.001, 0]} />
@@ -165,63 +166,63 @@ export function ClearView(props) {
         <mesh name="lock2" geometry={nodes.lock2.geometry} material={nodes.lock2.material} position={[0.023, -0.316, -0.061]} rotation={[0.379, -1.511, 1.725]} />
         <mesh name="metal2" geometry={nodes.metal2.geometry} material={materials.metal} position={[0.227, -0.044, 0.005]} />
         <mesh name="moc1" geometry={nodes.moc1.geometry} material={materials.metal} position={[0.227, 0.178, 0.005]} />
-        <mesh name="lock1" geometry={nodes.lock1.geometry} material={matInterior()} position={[0.031, -0.321, -0.047]} />
+        <mesh name="lock1" geometry={nodes.lock1.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} position={[0.031, -0.321, -0.047]} />
         <mesh name="Bolt006" geometry={nodes.Bolt006.geometry} material={materials.metal} position={[-0.072, -0.321, 0.003]} rotation={[Math.PI, -1.224, Math.PI]} />
         <mesh name="Bolt007" geometry={nodes.Bolt007.geometry} material={materials.metal} position={[-0.108, 0.312, -0.011]} rotation={[0, 1.477, 0]} />
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={nodes.Cube027.material} position={[-0.073, -0.317, 0.002]} rotation={[0, 0.071, 0]} />
-        <mesh name="Plane001" geometry={nodes.Plane001.geometry} material={matInterior()} position={[0.026, -0.315, -0.067]} rotation={[-2.845, -0.973, 1.635]} />
+        <mesh name="Plane001" geometry={nodes.Plane001.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} position={[0.026, -0.315, -0.067]} rotation={[-2.845, -0.973, 1.635]} />
         <mesh name="metal3" geometry={nodes.metal3.geometry} material={materials.metal} position={[0.22, -0.106, -0.005]} rotation={[0, 0, -Math.PI / 2]} />
         <mesh name="metal4" geometry={nodes.metal4.geometry} material={materials.metal} position={[0.222, -0.106, 0.005]} rotation={[0, 0, -Math.PI / 2]} />
         <mesh name="metal5" geometry={nodes.metal5.geometry} material={materials.metal} position={[0.217, -0.106, 0.005]} rotation={[0, 0, -Math.PI / 2]} />
         <group name="sdl0" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(3, 0)}>
           <mesh name="sdl0_1" geometry={nodes.sdl0_1.geometry} material={matExterior()} />
-          <mesh name="sdl0_2" geometry={nodes.sdl0_2.geometry} material={matInterior()} />
+          <mesh name="sdl0_2" geometry={nodes.sdl0_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="flat0" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(1, 0)}>
           <mesh name="flat0_1" geometry={nodes.flat0_1.geometry} material={matExterior()} />
-          <mesh name="flat0_2" geometry={nodes.flat0_2.geometry} material={matInterior()} />
+          <mesh name="flat0_2" geometry={nodes.flat0_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="gbg0" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(2, 0)}>
           <mesh name="gbg0_1" geometry={nodes.gbg0_1.geometry} material={matExterior()} />
-          <mesh name="gbg0_2" geometry={nodes.gbg0_2.geometry} material={matInterior()} />
+          <mesh name="gbg0_2" geometry={nodes.gbg0_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="flat1" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(1, 1)}>
           <mesh name="flat1_1" geometry={nodes.flat1_1.geometry} material={matExterior()} />
-          <mesh name="flat1_2" geometry={nodes.flat1_2.geometry} material={matInterior()} />
+          <mesh name="flat1_2" geometry={nodes.flat1_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="sdl1" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(3, 1)}>
           <mesh name="sdl1_1" geometry={nodes.sdl1_1.geometry} material={matExterior()} />
-          <mesh name="sdl1_2" geometry={nodes.sdl1_2.geometry} material={matInterior()} />
+          <mesh name="sdl1_2" geometry={nodes.sdl1_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="gbg1" position={[0, 0, 0.003]} rotation={[0, 0, -Math.PI / 2]} scale={1.074} visible={gridSwitch(2, 1)}>
           <mesh name="gbg1_1" geometry={nodes.gbg1_1.geometry} material={matExterior()} />
-          <mesh name="gbg1_2" geometry={nodes.gbg1_2.geometry} material={matInterior()} />
+          <mesh name="gbg1_2" geometry={nodes.gbg1_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="flat2" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(1, 2)}>
           <mesh name="flat2_1" geometry={nodes.flat2_1.geometry} material={matExterior()} />
-          <mesh name="flat2_2" geometry={nodes.flat2_2.geometry} material={matInterior()} />
+          <mesh name="flat2_2" geometry={nodes.flat2_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="gbg2" position={[0, 0, 0.003]} rotation={[0, 0, -Math.PI / 2]} scale={1.074} visible={gridSwitch(2, 2)}>
           <mesh name="gbg2_1" geometry={nodes.gbg2_1.geometry} material={matExterior()} />
-          <mesh name="gbg2_2" geometry={nodes.gbg2_2.geometry} material={matInterior()} />
+          <mesh name="gbg2_2" geometry={nodes.gbg2_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="sdl2" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(3, 2)}>
           <mesh name="sdl2_1" geometry={nodes.sdl2_1.geometry} material={matExterior()} />
-          <mesh name="sdl2_2" geometry={nodes.sdl2_2.geometry} material={matInterior()} />
+          <mesh name="sdl2_2" geometry={nodes.sdl2_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="flat3" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(1, 3)}>
           <mesh name="flat3_1" geometry={nodes.flat3_1.geometry} material={matExterior()} />
-          <mesh name="flat3_2" geometry={nodes.flat3_2.geometry} material={matInterior()} />
+          <mesh name="flat3_2" geometry={nodes.flat3_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="gbg3" position={[0, 0, 0.003]} rotation={[0, 0, -Math.PI / 2]} scale={1.074} visible={gridSwitch(2, 3)}>
           <mesh name="gbg3_1" geometry={nodes.gbg3_1.geometry} material={matExterior()} />
-          <mesh name="gbg3_2" geometry={nodes.gbg3_2.geometry} material={matInterior()} />
+          <mesh name="gbg3_2" geometry={nodes.gbg3_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
         <group name="sdl3" position={[0, 0, 0.003]} scale={1.074} visible={gridSwitch(3, 3)}>
           <mesh name="sdl3_1" geometry={nodes.sdl3_1.geometry} material={matExterior()} />
-          <mesh name="sdl3_2" geometry={nodes.sdl3_2.geometry} material={matInterior()} />
+          <mesh name="sdl3_2" geometry={nodes.sdl3_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
         </group>
-        <mesh name="screen" geometry={nodes.screen.geometry} material={matInterior()} position={[0, 0, -0.049]} visible={switchScreen('Full Screen')} />
+        <mesh name="screen" geometry={nodes.screen.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} position={[0, 0, -0.049]} visible={switchScreen('Full Screen')} />
         <mesh name="screen_glass" geometry={nodes.screen_glass.geometry} material={materials['glass.001']} position={[0, 0, -0.047]} visible={switchScreen('Full Screen')} />
 
       </group>

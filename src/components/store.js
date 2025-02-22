@@ -88,7 +88,7 @@ const state = proxy([
         color: [],
         colorSelected: '',
 
-        exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        exColor: ['Full Black', 'White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'Cranberry', 'Burgandy'],
         inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
 
         excolorSelected: 'White',
@@ -160,7 +160,7 @@ const state = proxy([
 
         colorInOutDiff: true,
 
-        exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'True Black', 'Cranberry', 'Burgandy'],
+        exColor: ['White', 'Beige', 'Cashmere', ' Ivory', 'Wicker', 'Sandalwood', 'Clay', 'Sandstone', 'American Brown', 'Universal Brown', 'Wedgewood Blue', 'Old World Blue', 'Forest Green', 'Sable', ' Bronze', 'Full Black', 'Cranberry', 'Burgandy'],
         inColor: ['White', 'Beige', 'Medium Oak', 'Cherry woodgrain', 'Brazilian Cherry wood grain'],
         hardColor: ['White', 'Beige', 'Bronze', 'Black', 'Brown'],
         excolorSelected: 'White',

@@ -26,7 +26,7 @@ export default function Customizer() {
     }, [isButtonDisabled])
 
     return (
-        <div className="customizer bg-[#FDFFFF]">
+        <div className="customizer bg-[#FDFFFF] text-gray-900">
             <div className="absolute top-[40px] left-[30px] h-10 md:h-20 w-64 flex flex-row items-center">
                 <img src={logo2} alt="Logo" className="h-full object-contain" />
                 <h2 className='pl-1 md:pl-3 text-xl md:text-3xl font-bold tracking-tighter'>{_gl.windows[_gl.window]}</h2>

@@ -1,15 +1,11 @@
-import { useEffect, useState } from 'react'
+
 import { motion, AnimatePresence } from 'framer-motion'
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
-import { AiFillCamera, AiOutlineArrowLeft, AiFillSound, AiFillMuted } from 'react-icons/ai'
 import { useSnapshot } from 'valtio'
-import { playClick, playSlide } from '../SoundFx'
+import { playClick } from '../SoundFx'
 import { gl } from '../global'
-import { state } from './store'
 import Customizer from './Customizer'
 
 import logo from '../assets/CCW-Logo.png';
-import logo2 from '../assets/fa.png'
 import image1 from '../assets/FreshSight.png';
 import image2 from '../assets/DreamGlaze.png';
 import image3 from '../assets/Impervia.png';
@@ -24,9 +20,7 @@ import image9 from '../assets/Lifestyle_casement.png';
 export function Overlay() {
 
     const _gl = useSnapshot(gl)
-    const handleMusic = (bool) => {
-        gl.music = bool
-    }
+
 
     const transition = { type: 'spring', duration: 0.8 }
     const config = {
@@ -49,15 +43,16 @@ export function Overlay() {
 
     return (
         <>
+
             <AnimatePresence>
                 {_gl.intro ? (
-                    <motion.section key="main" {...config} className="absolute top-0 left-0 w-full min-h-full flex flex-col items-center justify-center bg-[#FDFFFF]">
+                    <motion.section key="main" {...config} className="absolute text-gray-900 top-0 left-0 w-full min-h-full flex flex-col items-center justify-center bg-[#FDFFFF]">
                         <div className="h-20 md:h-32 w-96 overflow-hidden px-5 py-4 md:py-8">
                             <img src={logo} alt="Logo" className="h-full w-full object-contain" />
                         </div>
                         <div className="mb-3 md:mb-8 text-center">
                             <h1 className="text-2xl md:text-5xl font-extrabold tracking-tighter">Select Your Window</h1>
-                            <p className='text-base font-light tracking-tighter'>Enhance your home's aesthetics</p>
+                            <p className='text-base font-light tracking-tighter '>Enhance your home's aesthetics</p>
                         </div>
                         <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 p-10 overflow-hidden">
                             {products.map((product, index) => (
