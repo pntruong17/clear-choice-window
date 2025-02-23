@@ -181,7 +181,7 @@ export function DreamGraze(props) {
         <group ref={frame2} position={[0, -1 * offsetF2, 0]}>
           <group position={[0, offsetF2, 0]}>
             <mesh geometry={nodes.frame2_p1.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
-            <mesh geometry={nodes.frame2_p2.geometry} material={materials.Cashmere} />
+            <mesh geometry={nodes.frame2_p2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
             <mesh geometry={nodes.frame2_1.geometry} material={matExterior()} />
             <mesh geometry={nodes.frame2_2.geometry} material={_win.excolorSelected === colorFullWindow ? matExterior() : matInterior()} />
             <mesh geometry={nodes.glass2.geometry} material={materials['glass.001']} />
